@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Toaster } from 'sonner@2.0.3';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
@@ -180,7 +180,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/pwa-abamc">
+    <HashRouter>
       <AuthProvider>
         <AppDataProvider>
           <AppRoutes />
@@ -218,6 +218,6 @@ export default function App() {
           />
         </AppDataProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
