@@ -261,7 +261,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
                           whileTap={{ scale: 0.98 }}
                           className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                             isActive
-                              ? 'bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white shadow-md'
+                              ? 'bg-[#ff0000] text-white shadow-md'
                               : 'text-[#666] hover:bg-[#f5f5f5] hover:text-[#000]'
                           }`}
                         >
