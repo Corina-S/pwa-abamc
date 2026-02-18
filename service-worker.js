@@ -6,7 +6,6 @@ const IMAGE_CACHE = 'abamc-images-v1';
 const PRECACHE_URLS = [
   '/pwa-abamc/',
   '/pwa-abamc/index.html',
-  '/pwa-abamc/styles/globals.css',
   '/pwa-abamc/offline.html'
 ];
 
