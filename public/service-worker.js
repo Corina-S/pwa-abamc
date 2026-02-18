@@ -1,12 +1,17 @@
-const CACHE_NAME = 'abamc-pwa-v1';
-const RUNTIME_CACHE = 'abamc-runtime-v1';
-const IMAGE_CACHE = 'abamc-images-v1';
+const CACHE_NAME = 'abamc-pwa-v2';
+const RUNTIME_CACHE = 'abamc-runtime-v2';
+const IMAGE_CACHE = 'abamc-images-v2';
 
 // Risorse da cachare immediatamente all'installazione
 const PRECACHE_URLS = [
   '/pwa-abamc/',
   '/pwa-abamc/index.html',
-  '/pwa-abamc/offline.html'
+  '/pwa-abamc/offline.html',
+  '/pwa-abamc/manifest.json',
+  '/pwa-abamc/assets/index-BMUzGd2e.css',
+  '/pwa-abamc/assets/index-DpBZpm3Y.js',
+  '/pwa-abamc/icon-192.png',
+  '/pwa-abamc/icon-512.png'
 ];
 
 // Installazione del Service Worker
@@ -50,6 +55,11 @@ self.addEventListener('fetch', (event) => {
 
   // Ignora richieste non-GET
   if (request.method !== 'GET') return;
+
+  // Ignora navigazioni del browser (lascia che React Router le gestisca)
+  if (request.destination === 'document' && request.mode === 'navigate') {
+    return;
+  }
 
   // Ignora richieste a domini esterni (eccetto API CINECA)
   if (url.origin !== location.origin && !url.hostname.includes('cineca.it')) {
