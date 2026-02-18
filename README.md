@@ -78,10 +78,11 @@ git push origin gh-pages-deploy:gh-pages --force
 - Radix UI Components
 - PWA APIs
 
-## 🔐 Note su Sicurezza
+## 🔐 Note
 
-- Questo è un prototipo demo
-- I dati sono mockerati (mockData)
-- Per produzione: integrare API reali CINECA
-- Implementare autenticazione JWT
+- **Progetto Didattico**: Prototipo interattivo con dati completamente mockerati
+- **UI/UX Demo**: Tutti i dati sono locali (mockData.ts)
+- **Nessuna dipendenza esterna**: Non richiede server o API
+- **Offline-first**: Funziona completamente senza connessione internet
+- **Installabile come App**: Funzionamento identico a app native iOS/Android
   
