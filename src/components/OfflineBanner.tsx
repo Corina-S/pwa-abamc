@@ -13,7 +13,7 @@ export function OfflineBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0 }}
           transition={{ type: 'spring', damping: 20 }}
-          className="fixed top-16 left-4 right-4 z-40 bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white px-5 py-3 shadow-xl rounded-xl backdrop-blur-lg"
+          className="fixed top-16 left-4 right-4 z-40 bg-[#ff0000] text-white px-5 py-3 shadow-xl rounded-xl backdrop-blur-lg"
         >
           <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
             <div className="p-1.5 bg-white/20 rounded-lg">
@@ -32,7 +32,7 @@ export function OfflineBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -100, opacity: 0 }}
           transition={{ type: 'spring', damping: 20, delay: 0.2 }}
-          className="fixed top-16 left-4 right-4 z-40 bg-gradient-to-r from-[#16a34a] to-[#15803d] text-white px-5 py-3 shadow-xl rounded-xl backdrop-blur-lg"
+          className="fixed top-16 left-4 right-4 z-40 bg-[#16a34a] text-white px-5 py-3 shadow-xl rounded-xl backdrop-blur-lg"
         >
           <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
             <div className="p-1.5 bg-white/20 rounded-lg">

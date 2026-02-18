@@ -35,7 +35,7 @@ export function BottomNav({ isMenuOpen = false }: BottomNavProps) {
             >
               {/* Active indicator */}
               {active && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-[#ff0000] to-[#cc0000] rounded-b-full" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#ff0000] rounded-b-full" />
               )}
               
               {/* Icon container with hover effect */}

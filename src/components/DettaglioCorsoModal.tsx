@@ -29,7 +29,7 @@ export function DettaglioCorsoModal({ isOpen, onClose, corso }: DettaglioCorsoMo
       >
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#ff0000] to-[#cc0000] rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#ff0000] rounded-lg flex items-center justify-center">
               <BookOpen className="w-6 h-6 text-white" />
             </div>
             <div>
