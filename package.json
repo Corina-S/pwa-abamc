@@ -60,12 +60,14 @@
             "eslint-plugin-react-hooks": "^7.0.1",
             "eslint-plugin-react-refresh": "^0.4.26",
             "eslint-plugin-unused-imports": "^4.3.0",
+            "gh-pages": "^6.3.0",
             "typescript-eslint": "^8.53.1",
             "vite": "6.3.5"
       },
       "scripts": {
             "dev": "vite --host",
             "build": "vite build",
+            "deploy": "npm run build && gh-pages -d build -b gh-pages",
             "lint": "eslint src",
             "lint:fix": "eslint src --fix"
       }
