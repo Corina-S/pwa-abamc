@@ -108,7 +108,7 @@ export function RisorseDocente() {
       {/* Pulsante Carica Risorsa */}
       <button
         onClick={() => setUploadModalOpen(true)}
-        className="w-full bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
+        className="w-full bg-[#ff0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
       >
         <Plus className="w-6 h-6" />
         <span>Carica Nuova Risorsa</span>

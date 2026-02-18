@@ -46,7 +46,7 @@ export function ProfiloStudente() {
       {/* Info Personali */}
       <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-6">
         <div className="flex items-start gap-4 mb-6">
-          <div className="w-20 h-20 bg-gradient-to-br from-[#ff0000] to-[#cc0000] rounded-full flex items-center justify-center text-white text-2xl">
+          <div className="w-20 h-20 bg-[#ff0000] rounded-full flex items-center justify-center text-white text-2xl">
             {user?.nome?.charAt(0)}{user?.cognome?.charAt(0)}
           </div>
           <div className="flex-1">
@@ -60,7 +60,7 @@ export function ProfiloStudente() {
 
         <button
           onClick={() => setBadgeOpen(true)}
-          className="w-full py-3 bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white rounded-lg hover:shadow-lg transition-shadow flex items-center justify-center gap-2"
+          className="w-full py-3 bg-[#ff0000] text-white rounded-lg hover:shadow-lg transition-shadow flex items-center justify-center gap-2"
         >
           <QrCode className="w-5 h-5" />
           Mostra Badge Studente
@@ -130,7 +130,7 @@ export function ProfiloStudente() {
 
       {/* Gamification - Achievements */}
       {achievementsBloccati.length > 0 && (
-        <div className="bg-gradient-to-br from-[#ff0000]/10 to-[#000000]/10 rounded-xl border-2 border-[#ff0000]/20 p-6">
+        <div className="bg-white rounded-xl border-2 border-[#ff0000]/20 p-6">
           <h3 className="mb-4 flex items-center gap-2">
             <Award className="w-6 h-6 text-[#ff0000]" />
             Traguardi Raggiunti
@@ -280,7 +280,7 @@ export function ProfiloStudente() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-md bg-gradient-to-br from-white to-[#f8f9fa] rounded-2xl z-50 p-6 shadow-2xl"
+              className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-md bg-white rounded-2xl z-50 p-6 shadow-2xl"
             >
               <div className="flex items-center justify-between mb-6">
                 <h3 className="gradient-text">Badge Studente</h3>
@@ -314,7 +314,7 @@ export function ProfiloStudente() {
                 {/* Student Info */}
                 <div className="relative mb-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-white to-[#f5f5f5] rounded-2xl flex items-center justify-center text-[#ff0000] text-2xl shadow-xl border-4 border-white/30">
+                    <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center text-[#ff0000] text-2xl shadow-xl border-4 border-white/30">
                       {user?.nome?.charAt(0)}{user?.cognome?.charAt(0)}
                     </div>
                     <div className="flex-1">
@@ -336,7 +336,7 @@ export function ProfiloStudente() {
                 <div className="relative bg-white rounded-2xl p-5 shadow-2xl">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-28 h-28 bg-gradient-to-br from-[#f8f9fa] to-white rounded-xl flex items-center justify-center border-2 border-[#afafaf]/20 shadow-inner">
+                      <div className="w-28 h-28 bg-white rounded-xl flex items-center justify-center border-2 border-[#afafaf]/20 shadow-inner">
                         <QrCode className="w-16 h-16 text-[#000000]" />
                       </div>
                     </div>
@@ -365,7 +365,7 @@ export function ProfiloStudente() {
                   Chiudi
                 </button>
                 <button
-                  className="flex-1 px-4 py-3 bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white rounded-xl hover:shadow-lg transition-all duration-200 shadow-md active:scale-95"
+                  className="flex-1 px-4 py-3 bg-[#ff0000] text-white rounded-xl hover:shadow-lg transition-all duration-200 shadow-md active:scale-95"
                   onClick={() => {
                     toast.success('Badge salvato come immagine');
                   }}

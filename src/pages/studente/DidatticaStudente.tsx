@@ -425,7 +425,7 @@ export function DidatticaStudente() {
 
                 {/* Valutazione Docente */}
                 {consegnaCorrente.stato === 'valutato' && (
-                  <div className="bg-gradient-to-br from-[#16a34a]/10 to-[#16a34a]/5 border-l-4 border-[#16a34a] rounded-lg p-4">
+                  <div className="bg-white border-l-4 border-[#16a34a] rounded-lg p-4">>
                     <h4 className="text-sm mb-3 flex items-center gap-2">
                       <Award className="w-5 h-5 text-[#16a34a]" />
                       Valutazione

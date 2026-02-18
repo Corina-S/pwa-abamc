@@ -308,7 +308,7 @@ export function PresenzeStudente() {
                   </button>
                   <button
                     onClick={handlePermissionAccept}
-                    className="flex-1 py-3 px-4 bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white rounded-xl hover:shadow-lg transition-shadow"
+                    className="flex-1 py-3 px-4 bg-[#ff0000] text-white rounded-xl hover:shadow-lg transition-shadow"
                   >
                     Consenti
                   </button>

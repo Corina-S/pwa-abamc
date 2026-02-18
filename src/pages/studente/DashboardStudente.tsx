@@ -132,7 +132,7 @@ export function DashboardStudente() {
 
       {/* Consegne in Scadenza */}
       {elaboratiDaConsegnare.length > 0 && (
-        <div className="bg-gradient-to-br from-[#f59e0b]/10 to-[#f59e0b]/5 border-l-4 border-[#f59e0b] rounded-2xl p-5 shadow-sm">
+        <div className="bg-white border-l-4 border-[#f59e0b] rounded-2xl p-5 shadow-sm">
           <div className="flex items-center gap-2 mb-4">
             <div className="p-2 bg-[#f59e0b]/10 rounded-lg">
               <FileText className="w-5 h-5 text-[#f59e0b]" />

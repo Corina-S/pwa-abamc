@@ -179,7 +179,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
             href="https://abamc.esse3.cineca.it/Home.do"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-3 py-3 text-[#000] hover:bg-gradient-to-r hover:from-[#ff0000]/5 hover:to-transparent rounded-xl transition-all duration-200 hover:translate-x-1 hover:shadow-sm"
+            className="flex items-center gap-3 px-3 py-3 text-[#000] hover:bg-[#ff0000]/5 rounded-xl transition-all duration-200 hover:translate-x-1 hover:shadow-sm"
           >
             <ExternalLink className="w-5 h-5" />
             <span className="text-sm font-medium">CINECA</span>

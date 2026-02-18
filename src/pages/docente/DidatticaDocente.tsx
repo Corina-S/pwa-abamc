@@ -90,7 +90,7 @@ export function DidatticaDocente() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <motion.div 
           whileHover={{ scale: 1.02 }}
-          className="bg-gradient-to-br from-[#f59e0b]/10 to-white rounded-xl shadow-md border border-[#f59e0b]/20 p-6 hover:shadow-lg transition-all duration-300"
+          className="bg-white rounded-xl shadow-md border border-[#f59e0b]/20 p-6 hover:shadow-lg transition-all duration-300"
         >
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2.5 bg-[#f59e0b]/10 rounded-xl">
@@ -106,7 +106,7 @@ export function DidatticaDocente() {
         
         <motion.div 
           whileHover={{ scale: 1.02 }}
-          className="bg-gradient-to-br from-[#16a34a]/10 to-white rounded-xl shadow-md border border-[#16a34a]/20 p-6 hover:shadow-lg transition-all duration-300"
+          className="bg-white rounded-xl shadow-md border border-[#16a34a]/20 p-6 hover:shadow-lg transition-all duration-300"
         >
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2.5 bg-[#16a34a]/10 rounded-xl">
@@ -122,7 +122,7 @@ export function DidatticaDocente() {
         
         <motion.div 
           whileHover={{ scale: 1.02 }}
-          className="bg-gradient-to-br from-[#ff0000]/10 to-white rounded-xl shadow-md border border-[#ff0000]/20 p-6 hover:shadow-lg transition-all duration-300"
+          className="bg-white rounded-xl shadow-md border border-[#ff0000]/20 p-6 hover:shadow-lg transition-all duration-300"
         >
           <div className="flex items-center gap-3 mb-3">
             <div className="p-2.5 bg-[#ff0000]/10 rounded-xl">
@@ -515,7 +515,7 @@ export function DidatticaDocente() {
 
                 {/* Sezione Valutazione */}
                 {consegnaCorrente.stato === 'consegnato' && (
-                  <div className="bg-gradient-to-br from-[#ff0000]/10 to-[#ff0000]/5 border-l-4 border-[#ff0000] rounded-lg p-4">
+                  <div className="bg-white border-l-4 border-[#ff0000] rounded-lg p-4">
                     <h4 className="text-sm mb-4 flex items-center gap-2">
                       <Award className="w-5 h-5 text-[#ff0000]" />
                       Valutazione
@@ -577,7 +577,7 @@ export function DidatticaDocente() {
 
                 {/* Visualizza Valutazione Esistente */}
                 {consegnaCorrente.stato === 'valutato' && (
-                  <div className="bg-gradient-to-br from-[#16a34a]/10 to-[#16a34a]/5 border-l-4 border-[#16a34a] rounded-lg p-4">
+                  <div className="bg-white border-l-4 border-[#16a34a] rounded-lg p-4">>
                     <h4 className="text-sm mb-3 flex items-center gap-2">
                       <Award className="w-5 h-5 text-[#16a34a]" />
                       Valutazione Assegnata

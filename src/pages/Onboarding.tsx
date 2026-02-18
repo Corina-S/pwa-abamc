@@ -78,7 +78,7 @@ export function Onboarding() {
   const Icon = slide.icon;
 
   const onboardingBackground = slide.isRed
-    ? { background: 'linear-gradient(135deg, #fd9191 0%, #ff5858 50%, #f74d4d 100%)' }
+    ? { background: '#ff5858' }
     : undefined;
 
   return (
