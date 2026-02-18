@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ABAMC</title>
+    <script type="text/javascript">
+      // Redirect 404s to the index page with the request as a parameter
+      // This allows client-side routing to work for GitHub Pages subpath deployment
+      var pathSegmentsToKeep = 1; // Keep the "pwa-abamc" segment
+      
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?redirect=' +
+          encodeURIComponent(
+            l.pathname
+              .split('/')
+              .slice(pathSegmentsToKeep)
+              .join('/') +
+              (l.search ? '?' + l.search.slice(1) : '')
+          ) +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
+
