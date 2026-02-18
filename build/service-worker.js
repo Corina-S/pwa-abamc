@@ -4,10 +4,10 @@ const IMAGE_CACHE = 'abamc-images-v1';
 
 // Risorse da cachare immediatamente all'installazione
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/styles/globals.css',
-  '/offline.html'
+  '/pwa-abamc/',
+  '/pwa-abamc/index.html',
+  '/pwa-abamc/styles/globals.css',
+  '/pwa-abamc/offline.html'
 ];
 
 // Installazione del Service Worker
