@@ -65,7 +65,7 @@ export function ProfiloDocente() {
       </div>
 
       {/* Card Profilo */}
-      <div className="bg-[#ff0000] text-white rounded-xl shadow-lg p-6">>
+      <div className="bg-[#ff0000] text-white rounded-xl shadow-lg p-6">
         <div className="flex items-start gap-4">
           <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl">
             {user?.nome[0]}{user?.cognome[0]}
