@@ -577,7 +577,7 @@ export function DidatticaDocente() {
 
                 {/* Visualizza Valutazione Esistente */}
                 {consegnaCorrente.stato === 'valutato' && (
-                  <div className="bg-white border-l-4 border-[#16a34a] rounded-lg p-4">>
+                  <div className="bg-white border-l-4 border-[#16a34a] rounded-lg p-4">
                     <h4 className="text-sm mb-3 flex items-center gap-2">
                       <Award className="w-5 h-5 text-[#16a34a]" />
                       Valutazione Assegnata
