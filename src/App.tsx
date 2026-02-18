@@ -197,7 +197,7 @@ export default function App() {
               className: 'custom-toast',
               success: {
                 style: {
-                  background: 'linear-gradient(135deg, #16a34a 0%, #15803d 100%)',
+                  background: '#16a34a',
                   color: '#fff',
                   border: 'none',
                   borderRadius: '12px',
@@ -206,7 +206,7 @@ export default function App() {
               },
               error: {
                 style: {
-                  background: 'linear-gradient(135deg, #ff0000 0%, #cc0000 100%)',
+                  background: '#ff0000',
                   color: '#fff',
                   border: 'none',
                   borderRadius: '12px',
