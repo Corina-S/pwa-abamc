@@ -204,6 +204,15 @@ button {
   animation: slide-in 0.4s ease-out;
 }
 
+/* Red Background Text Color Guarantee */
+[style*="background-color: rgb(255, 0, 0)"],
+[style*="background-color: #ff0000"],
+[style*="background-color: #FF0000"],
+.bg-\[#ff0000\],
+.bg-red-600 {
+  color: #ffffff !important;
+}
+
 /* Smooth Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
