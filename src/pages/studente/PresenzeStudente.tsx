@@ -59,7 +59,7 @@ export function PresenzeStudente() {
       {/* Scanner QR */}
       <button
         onClick={handleOpenScanner}
-        className="w-full bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
+        className="w-full bg-[#ff0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
       >
         <Camera className="w-6 h-6" />
         <span>Scansiona QR Code</span>

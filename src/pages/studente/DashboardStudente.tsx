@@ -85,7 +85,7 @@ export function DashboardStudente() {
       {prossimaLezione && (
         <div className="modern-card p-6 overflow-hidden relative">
           {/* Gradient accent */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#ff0000] to-[#cc0000]" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-[#ff0000]" />
           
           <div className="flex items-center gap-3 mb-5">
             <div className="p-2.5 bg-[#ff0000]/10 rounded-xl">
@@ -193,7 +193,7 @@ export function DashboardStudente() {
                 <div className="w-full bg-[#f8f9fa] rounded-full h-2.5 overflow-hidden shadow-inner">
                   <div
                     className={`h-full rounded-full transition-all duration-500 ${
-                      aRischio ? 'bg-gradient-to-r from-[#ff0000] to-[#cc0000]' : 'bg-gradient-to-r from-[#16a34a] to-[#15803d]'
+                      aRischio ? 'bg-[#ff0000]' : 'bg-[#16a34a]'
                     }`}
                     style={{ width: `${item.percentuale}%` }}
                   />
@@ -214,7 +214,7 @@ export function DashboardStudente() {
         </div>
         <div className="space-y-3">
           {esamiRecenti.map(esame => (
-            <div key={esame.id} className="flex items-center justify-between p-4 bg-gradient-to-br from-[#f8f9fa] to-white rounded-xl border border-[#afafaf]/10 hover:shadow-md transition-all duration-200">
+            <div key={esame.id} className="flex items-center justify-between p-4 bg-white rounded-xl border border-[#afafaf]/10 hover:shadow-md transition-all duration-200">
               <div>
                 <h4>{esame.corso}</h4>
                 <p className="text-xs text-[#afafaf] mt-0.5">
@@ -222,7 +222,7 @@ export function DashboardStudente() {
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[#000000] to-[#333333] text-white shadow-lg">
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#000000] text-white shadow-lg">
                   <span className="text-lg">{esame.voto}</span>
                 </div>
                 {esame.lode && (
@@ -238,14 +238,14 @@ export function DashboardStudente() {
 
       {/* Carriera */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-gradient-to-br from-[#ff0000] to-[#cc0000] text-white p-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="bg-[#ff0000] text-white p-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300">
           <div className="p-2.5 bg-white/20 rounded-xl w-fit mb-3">
             <BookOpen className="w-7 h-7" />
           </div>
           <p className="text-sm opacity-90 mb-1">Media Ponderata</p>
           <p className="text-4xl">{mockCarriera.mediaPonderata}</p>
         </div>
-        <div className="bg-gradient-to-br from-[#000000] to-[#333333] text-white p-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="bg-[#000000] text-white p-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300">
           <div className="p-2.5 bg-white/20 rounded-xl w-fit mb-3">
             <Award className="w-7 h-7" />
           </div>

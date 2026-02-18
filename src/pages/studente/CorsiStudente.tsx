@@ -33,7 +33,7 @@ export function CorsiStudente() {
       </div>
 
       {/* Riepilogo Carriera */}
-      <div className="bg-gradient-to-r from-[#ff0000] to-[#cc0000] text-white rounded-xl shadow-lg p-5">
+      <div className="bg-[#ff0000] text-white rounded-xl shadow-lg p-5">
         <div className="flex items-center gap-2 mb-4">
           <GraduationCap className="w-6 h-6" />
           <h3 className="text-white">Riepilogo Carriera</h3>

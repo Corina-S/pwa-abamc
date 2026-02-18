@@ -84,7 +84,7 @@ export function Onboarding() {
   return (
     <div
       style={onboardingBackground}
-      className={`min-h-screen ${slide.isRed ? '' : 'bg-gradient-to-br from-white via-[#f5f5f5] to-[#afafaf]/20'} flex flex-col transition-colors duration-500`}
+      className={`min-h-screen ${slide.isRed ? '' : 'bg-white'} flex flex-col transition-colors duration-500`}
     >
       {/* Header */}
       <div className="p-4 flex justify-between items-center">

@@ -100,7 +100,7 @@ export function DidatticaDocente() {
           </div>
           <p className="text-4xl font-bold text-[#000]">{statistiche.daValutare}</p>
           <div className="mt-2 h-1 bg-[#f59e0b]/20 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-[#f59e0b] to-[#d97706] w-3/4 rounded-full" />
+            <div className="h-full bg-[#f59e0b] w-3/4 rounded-full" />
           </div>
         </motion.div>
         
@@ -116,7 +116,7 @@ export function DidatticaDocente() {
           </div>
           <p className="text-4xl font-bold text-[#000]">{statistiche.valutati}</p>
           <div className="mt-2 h-1 bg-[#16a34a]/20 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-[#16a34a] to-[#15803d] w-3/4 rounded-full" />
+            <div className="h-full bg-[#16a34a] w-3/4 rounded-full" />
           </div>
         </motion.div>
         
@@ -132,7 +132,7 @@ export function DidatticaDocente() {
           </div>
           <p className="text-4xl font-bold text-[#000]">{statistiche.totaleConsegne}</p>
           <div className="mt-2 h-1 bg-[#ff0000]/20 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-[#ff0000] to-[#cc0000] w-full rounded-full" />
+            <div className="h-full bg-[#ff0000] w-full rounded-full" />
           </div>
         </motion.div>
       </div>
