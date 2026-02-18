@@ -180,7 +180,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/pwa-abamc">
       <AuthProvider>
         <AppDataProvider>
           <AppRoutes />
