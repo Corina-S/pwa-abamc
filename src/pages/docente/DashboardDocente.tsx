@@ -63,7 +63,7 @@ export function DashboardDocente() {
       {notificheUrgenti.length > 0 && (
         <div className="bg-[#ff0000]/10 border-l-4 border-[#ff0000] rounded-lg p-4 space-y-3">
           <div className="flex items-center gap-2">
-            <AlertTriangle className="w-5 h-5 text-[#ff0000]" />
+            <AlertTriangle className="w-5 h-5 text-[#ff0000]" aria-label="Comunicazioni urgenti" />
             <h3 className="text-sm">Comunicazioni dall&apos;Accademia</h3>
           </div>
           {notificheUrgenti.map(notifica => (
@@ -72,6 +72,7 @@ export function DashboardDocente() {
                 onClick={() => handleRimuoviNotifica(notifica.id)}
                 className="absolute top-2 right-2 p-1 hover:bg-[#f5f5f5] rounded-lg transition-colors"
                 title="Archivia comunicazione"
+                aria-label="Archivia comunicazione"
               >
                 <X className="w-4 h-4 text-[#afafaf] hover:text-[#ff0000]" />
               </button>
@@ -86,7 +87,7 @@ export function DashboardDocente() {
       {prossimaLezione && (
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-5">
           <div className="flex items-center gap-2 mb-4">
-            <Clock className="w-5 h-5 text-[#ff0000]" />
+            <Clock className="w-5 h-5 text-[#ff0000]" aria-label="Prossima lezione" />
             <h3>Prossima Lezione</h3>
           </div>
           <div className="space-y-3">
@@ -95,23 +96,23 @@ export function DashboardDocente() {
             </div>
             <div className="flex items-center gap-4 text-sm">
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#afafaf]" />
+                <Calendar className="w-4 h-4 text-[#afafaf]" aria-label="Data della lezione" />
                 <span>{new Date(prossimaLezione.giorno).toLocaleDateString('it-IT')}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#afafaf]" />
+                <Clock className="w-4 h-4 text-[#afafaf]" aria-label="Orario della lezione" />
                 <span>{prossimaLezione.oraInizio} - {prossimaLezione.oraFine}</span>
               </div>
             </div>
             {prossimaLezione.tipo === 'presenza' && prossimaLezione.aula && (
               <div className="flex items-center gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-[#afafaf]" />
+                <MapPin className="w-4 h-4 text-[#afafaf]" aria-label="Aula della lezione" />
                 <span>{prossimaLezione.aula}</span>
               </div>
             )}
             {prossimaLezione.linkOnline ? (
               <div className="flex items-center gap-2 text-sm text-[#ff0000]">
-                <LinkIcon className="w-4 h-4" />
+                <LinkIcon className="w-4 h-4" aria-label="Link lezione online" />
                 <span>{prossimaLezione.linkOnline}</span>
               </div>
             ) : (
@@ -127,6 +128,7 @@ export function DashboardDocente() {
       <button
         onClick={() => setComunicazioneOpen(true)}
         className="w-full bg-[#ff0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
+        aria-label="Invia comunicazione urgente"
       >
         <Send className="w-6 h-6" />
         <span>Invia Comunicazione Urgente</span>
@@ -136,7 +138,7 @@ export function DashboardDocente() {
       <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-5">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-[#ff0000]" />
+            <Users className="w-5 h-5 text-[#ff0000]" aria-label="Presenze studenti" />
             <h3>Presenze Studenti</h3>
           </div>
           <Link to="/presenze" className="text-sm text-[#ff0000] hover:underline">
@@ -161,7 +163,7 @@ export function DashboardDocente() {
       <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-5">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <MessageSquare className="w-5 h-5 text-[#ff0000]" />
+            <MessageSquare className="w-5 h-5 text-[#ff0000]" aria-label="Elaborati da valutare" />
             <h3>Elaborati da Valutare</h3>
           </div>
           <Link to="/didattica" className="text-sm text-[#ff0000] hover:underline">

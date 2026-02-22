@@ -107,6 +107,7 @@ export function AppelloModal({ isOpen, onClose, corso }: AppelloModalProps) {
           <button
             onClick={onClose}
             className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+            aria-label="Chiudi appello"
           >
             <X className="w-6 h-6" />
           </button>
@@ -142,7 +143,7 @@ export function AppelloModal({ isOpen, onClose, corso }: AppelloModalProps) {
 
               <div className="bg-[#f5f5f5] rounded-lg p-4">
                 <div className="flex items-center gap-3 mb-3">
-                  <Users className="w-5 h-5 text-[#ff0000]" />
+                  <Users className="w-5 h-5 text-[#ff0000]" aria-label="Studenti iscritti" />
                   <h4 className="text-sm">Studenti iscritti</h4>
                 </div>
                 <p className="text-2xl">{studenti.length}</p>
@@ -151,6 +152,7 @@ export function AppelloModal({ isOpen, onClose, corso }: AppelloModalProps) {
               <button
                 onClick={handleGeneraQR}
                 className="w-full py-4 bg-[#ff0000] text-white rounded-xl hover:bg-[#cc0000] transition-colors flex items-center justify-center gap-2 text-lg"
+                aria-label="Genera QR code per l'appello"
               >
                 <QrCode className="w-6 h-6" />
                 Genera QR Code
@@ -171,14 +173,14 @@ export function AppelloModal({ isOpen, onClose, corso }: AppelloModalProps) {
               {/* Mock QR Code */}
               <div className="bg-white border-4 border-[#ff0000] rounded-2xl p-8 flex items-center justify-center mx-auto max-w-sm">
                 <div className="w-64 h-64 bg-[#f5f5f5] rounded-lg flex items-center justify-center">
-                  <QrCode className="w-32 h-32 text-[#afafaf]" />
+                  <QrCode className="w-32 h-32 text-[#afafaf]" aria-label="QR code per la registrazione della presenza" />
                 </div>
               </div>
 
               {/* Timer */}
               <div className="bg-[#f5f5f5] rounded-lg p-4 text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
-                  <Clock className="w-5 h-5 text-[#ff0000]" />
+                  <Clock className="w-5 h-5 text-[#ff0000]" aria-label="Timer" />
                   <p className="text-sm text-[#666]">Tempo rimasto</p>
                 </div>
                 <p className="text-3xl text-[#ff0000]">{formatTempo(tempoRimasto)}</p>

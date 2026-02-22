@@ -88,13 +88,13 @@ export function RisorseDocente() {
   const getIconaTipo = (tipo: string) => {
     switch (tipo) {
       case 'pdf':
-        return <FileText className="w-5 h-5 text-[#ff0000]" />;
+        return <FileText className="w-5 h-5 text-[#ff0000]" aria-label="File PDF" />;
       case 'video':
-        return <Video className="w-5 h-5 text-[#ff0000]" />;
+        return <Video className="w-5 h-5 text-[#ff0000]" aria-label="File Video" />;
       case 'link':
-        return <LinkIcon className="w-5 h-5 text-[#ff0000]" />;
+        return <LinkIcon className="w-5 h-5 text-[#ff0000]" aria-label="Link esterno" />;
       default:
-        return <FileText className="w-5 h-5 text-[#ff0000]" />;
+        return <FileText className="w-5 h-5 text-[#ff0000]" aria-label="File" />;
     }
   };
 
@@ -110,24 +110,24 @@ export function RisorseDocente() {
         onClick={() => setUploadModalOpen(true)}
         className="w-full bg-[#ff0000] text-white py-4 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg transition-shadow"
       >
-        <Plus className="w-6 h-6" />
+        <Plus className="w-6 h-6" aria-label="Aggiungi una nuova risorsa" />
         <span>Carica Nuova Risorsa</span>
       </button>
 
       {/* Statistiche */}
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <FileText className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" />
+          <FileText className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio PDF" />
           <p className="text-2xl">{risorseDocente.filter(r => r.tipo === 'pdf').length}</p>
           <p className="text-xs text-[#afafaf]">PDF</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <Video className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" />
+          <Video className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio video" />
           <p className="text-2xl">{risorseDocente.filter(r => r.tipo === 'video').length}</p>
           <p className="text-xs text-[#afafaf]">Video</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <LinkIcon className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" />
+          <LinkIcon className="w-6 h-6 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio link" />
           <p className="text-2xl">{risorseDocente.filter(r => r.tipo === 'link').length}</p>
           <p className="text-xs text-[#afafaf]">Link</p>
         </div>
@@ -176,6 +176,7 @@ export function RisorseDocente() {
                       <button
                         className="p-2 text-[#ff0000] hover:bg-[#ff0000]/10 rounded-lg transition-colors"
                         onClick={() => handleDownload(risorsa)}
+                        aria-label="Scarica risorsa"
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -183,6 +184,7 @@ export function RisorseDocente() {
                       <button
                         className="p-2 text-[#ff0000] hover:bg-[#ff0000]/10 rounded-lg transition-colors"
                         onClick={() => handleOpenLink(risorsa)}
+                        aria-label="Apri link esterno"
                       >
                         <LinkIcon className="w-4 h-4" />
                       </button>
@@ -190,6 +192,7 @@ export function RisorseDocente() {
                     <button
                       className="p-2 text-[#ff0000] hover:bg-[#ff0000]/10 rounded-lg transition-colors"
                       onClick={() => handleDelete(risorsa)}
+                      aria-label="Elimina risorsa"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>

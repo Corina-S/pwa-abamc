@@ -65,12 +65,13 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="flex items-center gap-2">
-                <Lock className="w-5 h-5 text-[#ff0000]" />
+                <Lock className="w-5 h-5 text-[#ff0000]" aria-label="Modifica password" />
                 Modifica Password
               </h3>
               <button
                 onClick={onClose}
                 className="p-2 hover:bg-[#f5f5f5] rounded-lg transition-colors"
+                aria-label="Chiudi modale"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -81,7 +82,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
               <div>
                 <label className="block text-sm mb-2">Password Attuale</label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" aria-label="Password attuale" />
                   <input
                     type={showOld ? 'text' : 'password'}
                     value={oldPassword}
@@ -93,6 +94,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
                     type="button"
                     onClick={() => setShowOld(!showOld)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-[#f5f5f5] rounded"
+                    aria-label={showOld ? 'Nascondi password' : 'Mostra password'}
                   >
                     {showOld ? <EyeOff className="w-5 h-5 text-[#afafaf]" /> : <Eye className="w-5 h-5 text-[#afafaf]" />}
                   </button>
@@ -103,7 +105,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
               <div>
                 <label className="block text-sm mb-2">Nuova Password</label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" aria-label="Nuova password" />
                   <input
                     type={showNew ? 'text' : 'password'}
                     value={newPassword}
@@ -116,6 +118,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
                     type="button"
                     onClick={() => setShowNew(!showNew)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-[#f5f5f5] rounded"
+                    aria-label={showNew ? 'Nascondi password' : 'Mostra password'}
                   >
                     {showNew ? <EyeOff className="w-5 h-5 text-[#afafaf]" /> : <Eye className="w-5 h-5 text-[#afafaf]" />}
                   </button>
@@ -127,7 +130,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
               <div>
                 <label className="block text-sm mb-2">Conferma Nuova Password</label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" aria-label="Conferma password" />
                   <input
                     type={showConfirm ? 'text' : 'password'}
                     value={confirmPassword}
@@ -139,6 +142,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
                     type="button"
                     onClick={() => setShowConfirm(!showConfirm)}
                     className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-[#f5f5f5] rounded"
+                    aria-label={showConfirm ? 'Nascondi password' : 'Mostra password'}
                   >
                     {showConfirm ? <EyeOff className="w-5 h-5 text-[#afafaf]" /> : <Eye className="w-5 h-5 text-[#afafaf]" />}
                   </button>
@@ -158,6 +162,7 @@ export function ModificaPasswordModal({ isOpen, onClose }: ModificaPasswordModal
                   type="submit"
                   disabled={loading}
                   className="flex-1 py-3 bg-[#ff0000] text-white rounded-lg hover:bg-[#cc0000] transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                  aria-label="Salva nuova password"
                 >
                   {loading ? (
                     <>

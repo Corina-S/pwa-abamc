@@ -131,6 +131,7 @@ export function Onboarding() {
                 className="w-12 h-12"
                 style={{ color: slide.isRed ? '#ffffff' : slide.color }}
                 strokeWidth={2}
+                aria-label={slide.title.replace('Tutorial: ', '')}
               />
             </div>
 

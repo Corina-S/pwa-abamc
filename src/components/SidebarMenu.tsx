@@ -98,7 +98,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
         <Link to="/profilo" className="p-4 border-b border-[#afafaf]/20 hover:bg-[#f5f5f5] transition-colors">
           <div className="flex items-center gap-3 p-3 bg-[#ff0000]/5 rounded-xl">
             <div className="w-10 h-10 bg-[#ff0000] rounded-full flex items-center justify-center shadow-md">
-              <UserCircle className="w-6 h-6 text-white" />
+              <UserCircle className="w-6 h-6 text-white" aria-label="Accedi al profilo" />
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold text-[#000] truncate">
@@ -127,7 +127,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
                       : 'text-[#666] hover:bg-[#f5f5f5] hover:text-[#000]'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-5 h-5" aria-label={item.label} />
                   <span className="text-sm font-medium">{item.label}</span>
                 </motion.div>
               </Link>
@@ -154,7 +154,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
                         : 'text-[#666] hover:bg-[#f5f5f5] hover:text-[#000]'
                     }`}
                   >
-                    <Icon className="w-5 h-5" />
+                  <Icon className="w-5 h-5" aria-label={item.label} />
                     <span className="text-sm font-medium">{item.label}</span>
                   </motion.div>
                 </Link>
@@ -172,7 +172,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#666] hover:bg-[#f5f5f5] hover:text-[#000] transition-all duration-200"
           >
-            <ExternalLink className="w-5 h-5" />
+            <ExternalLink className="w-5 h-5" aria-label="Visita sito ABAMC" />
             <span className="text-sm font-medium">Sito ABAMC</span>
           </a>
           <a
@@ -181,7 +181,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-3 py-3 text-[#000] hover:bg-[#ff0000]/5 rounded-xl transition-all duration-200 hover:translate-x-1 hover:shadow-sm"
           >
-            <ExternalLink className="w-5 h-5" />
+            <ExternalLink className="w-5 h-5" aria-label="Visita CINECA" />
             <span className="text-sm font-medium">CINECA</span>
           </a>
         </nav>
@@ -192,7 +192,7 @@ export function SidebarMenu({ isOpen = true, onClose }: SidebarMenuProps) {
             onClick={handleLogout}
             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-[#666] hover:bg-[#ff0000]/10 hover:text-[#ff0000] transition-all duration-200"
           >
-            <LogOut className="w-5 h-5" />
+            <LogOut className="w-5 h-5" aria-label="Esci dall'applicazione" />
             <span className="text-sm font-medium">Logout</span>
           </button>
         </div>

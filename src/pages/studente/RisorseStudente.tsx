@@ -21,13 +21,13 @@ export function RisorseStudente() {
   const getTipoIcon = (tipo: string) => {
     switch (tipo) {
       case 'pdf':
-        return <FileText className="w-5 h-5 text-[#ff0000]" />;
+        return <FileText className="w-5 h-5 text-[#ff0000]" aria-label="File PDF" />;
       case 'video':
-        return <Video className="w-5 h-5 text-[#ff0000]" />;
+        return <Video className="w-5 h-5 text-[#ff0000]" aria-label="File Video" />;
       case 'link':
-        return <Link2 className="w-5 h-5 text-[#ff0000]" />;
+        return <Link2 className="w-5 h-5 text-[#ff0000]" aria-label="Link esterno" />;
       default:
-        return <File className="w-5 h-5 text-[#ff0000]" />;
+        return <File className="w-5 h-5 text-[#ff0000]" aria-label="File" />;
     }
   };
 
@@ -53,7 +53,7 @@ export function RisorseStudente() {
 
       {/* Ricerca */}
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#afafaf]" aria-label="Icona ricerca" />
         <input
           type="text"
           value={searchQuery}
@@ -66,7 +66,7 @@ export function RisorseStudente() {
       {/* Filtri */}
       <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-5">
         <div className="flex items-center gap-2 mb-4">
-          <Filter className="w-5 h-5" />
+          <Filter className="w-5 h-5" aria-label="Filtri" />
           <h3>Filtri</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -116,22 +116,22 @@ export function RisorseStudente() {
       {/* Statistiche */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <FileText className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" />
+          <FileText className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio PDF" />
           <p className="text-2xl">{mockRisorse.filter(r => r.tipo === 'pdf').length}</p>
           <p className="text-xs text-[#afafaf]">PDF</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <Video className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" />
+          <Video className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio video" />
           <p className="text-2xl">{mockRisorse.filter(r => r.tipo === 'video').length}</p>
           <p className="text-xs text-[#afafaf]">Video</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <Link2 className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" />
+          <Link2 className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio link" />
           <p className="text-2xl">{mockRisorse.filter(r => r.tipo === 'link').length}</p>
           <p className="text-xs text-[#afafaf]">Link</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-[#afafaf]/20 p-4 text-center">
-          <File className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" />
+          <File className="w-8 h-8 mx-auto mb-2 text-[#ff0000]" aria-label="Conteggio file totali" />
           <p className="text-2xl">{mockRisorse.length}</p>
           <p className="text-xs text-[#afafaf]">Totali</p>
         </div>
@@ -181,18 +181,19 @@ export function RisorseStudente() {
                         rel="noopener noreferrer"
                         className="text-sm text-[#ff0000] hover:underline flex items-center gap-1"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4" aria-label="Apri link esterno" />
                         Apri link
                       </a>
                     ) : (
                       <button 
                         onClick={() => toast.success('Download avvenuto con successo')}
                         className="text-sm text-[#ff0000] hover:underline flex items-center gap-1"
+                        aria-label="Scarica risorsa"
                       >
                         <Download className="w-4 h-4" />
                         Scarica
                       </button>
-                    )}
+                    )}}
                   </div>
                 </div>
               </div>

@@ -17,7 +17,7 @@ export function NotificationSettings() {
     return (
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/20 rounded-lg p-4">
         <div className="flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-[#f59e0b] flex-shrink-0 mt-0.5" />
+          <AlertCircle className="w-5 h-5 text-[#f59e0b] flex-shrink-0 mt-0.5" aria-label="Notifiche push non supportate" />
           <div>
             <h4 className="text-sm mb-1">Notifiche Push non supportate</h4>
             <p className="text-xs text-[#666]">
@@ -50,7 +50,7 @@ export function NotificationSettings() {
       {permission === 'denied' && (
         <div className="bg-[#ff0000]/10 border border-[#ff0000]/20 rounded-lg p-4">
           <div className="flex items-start gap-3">
-            <BellOff className="w-5 h-5 text-[#ff0000] flex-shrink-0 mt-0.5" />
+            <BellOff className="w-5 h-5 text-[#ff0000] flex-shrink-0 mt-0.5" aria-label="Notifiche bloccate" />
             <div>
               <h4 className="text-sm mb-1">Notifiche bloccate</h4>
               <p className="text-xs text-[#666]">
@@ -67,9 +67,9 @@ export function NotificationSettings() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {subscription ? (
-              <Bell className="w-5 h-5 text-[#16a34a]" />
+              <Bell className="w-5 h-5 text-[#16a34a]" aria-label="Notifiche abilitate" />
             ) : (
-              <BellOff className="w-5 h-5 text-[#afafaf]" />
+              <BellOff className="w-5 h-5 text-[#afafaf]" aria-label="Notifiche disabilitate" />
             )}
             <div>
               <h4 className="text-sm">Notifiche Push</h4>

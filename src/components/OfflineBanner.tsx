@@ -17,7 +17,7 @@ export function OfflineBanner() {
         >
           <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
             <div className="p-1.5 bg-white/20 rounded-lg">
-              <WifiOff className="w-5 h-5" />
+              <WifiOff className="w-5 h-5" aria-label="Sei offline" />
             </div>
             <p className="text-sm">
               Sei offline. Alcune funzionalità potrebbero non essere disponibili.
@@ -36,7 +36,7 @@ export function OfflineBanner() {
         >
           <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
             <div className="p-1.5 bg-white/20 rounded-lg">
-              <Wifi className="w-5 h-5" />
+              <Wifi className="w-5 h-5" aria-label="Connessione ripristinata" />
             </div>
             <p className="text-sm">
               Connessione ripristinata!

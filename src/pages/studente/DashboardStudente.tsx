@@ -61,7 +61,7 @@ export function DashboardStudente() {
         <div className="bg-[#ff0000]/5 border-l-4 border-[#ff0000] rounded-2xl p-5 space-y-3 shadow-sm animate-slide-in">
           <div className="flex items-center gap-2">
             <div className="p-2 bg-[#ff0000]/10 rounded-lg">
-              <AlertCircle className="w-5 h-5 text-[#ff0000]" />
+              <AlertCircle className="w-5 h-5 text-[#ff0000]" aria-label="Notifiche urgenti" />
             </div>
             <h3>Notifiche Urgenti</h3>
           </div>
@@ -73,6 +73,7 @@ export function DashboardStudente() {
                 className="absolute top-3 right-3 text-[#afafaf] hover:text-[#ff0000] transition-colors p-1 rounded-lg hover:bg-red-50"
                 onClick={() => handleRimuoviNotifica(notifica.id)}
                 title="Rimuovi notifica"
+                aria-label="Rimuovi notifica"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -89,7 +90,7 @@ export function DashboardStudente() {
           
           <div className="flex items-center gap-3 mb-5">
             <div className="p-2.5 bg-[#ff0000]/10 rounded-xl">
-              <Clock className="w-5 h-5 text-[#ff0000]" />
+              <Clock className="w-5 h-5 text-[#ff0000]" aria-label="Prossima lezione" />
             </div>
             <h3>Prossima Lezione</h3>
           </div>
@@ -101,17 +102,17 @@ export function DashboardStudente() {
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center gap-2 px-3 py-2 bg-[#f8f9fa] rounded-lg">
-                <Calendar className="w-4 h-4 text-[#afafaf]" />
+                <Calendar className="w-4 h-4 text-[#afafaf]" aria-label="Data della lezione" />
                 <span>{new Date(prossimaLezione.giorno).toLocaleDateString('it-IT')}</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-[#f8f9fa] rounded-lg">
-                <Clock className="w-4 h-4 text-[#afafaf]" />
+                <Clock className="w-4 h-4 text-[#afafaf]" aria-label="Orario della lezione" />
                 <span>{prossimaLezione.oraInizio} - {prossimaLezione.oraFine}</span>
               </div>
             </div>
             {prossimaLezione.tipo === 'presenza' && prossimaLezione.aula && (
               <div className="flex items-center gap-2 text-sm px-3 py-2 bg-[#f8f9fa] rounded-lg w-fit">
-                <MapPin className="w-4 h-4 text-[#afafaf]" />
+                <MapPin className="w-4 h-4 text-[#afafaf]" aria-label="Aula della lezione" />
                 <span>{prossimaLezione.aula}</span>
               </div>
             )}
@@ -122,7 +123,7 @@ export function DashboardStudente() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-white bg-[#ff0000] hover:bg-[#cc0000] px-4 py-2.5 rounded-xl transition-all duration-200 w-fit shadow-md hover:shadow-lg active:scale-95"
               >
-                <LinkIcon className="w-4 h-4" />
+                <LinkIcon className="w-4 h-4" aria-label="Link lezione online" />
                 <span>Accedi alla lezione online</span>
               </a>
             )}
@@ -135,7 +136,7 @@ export function DashboardStudente() {
         <div className="bg-white border-l-4 border-[#f59e0b] rounded-2xl p-5 shadow-sm">
           <div className="flex items-center gap-2 mb-4">
             <div className="p-2 bg-[#f59e0b]/10 rounded-lg">
-              <FileText className="w-5 h-5 text-[#f59e0b]" />
+              <FileText className="w-5 h-5 text-[#f59e0b]" aria-label="Consegne in scadenza" />
             </div>
             <h3>Consegne in Scadenza</h3>
           </div>
@@ -147,7 +148,7 @@ export function DashboardStudente() {
                     <h4 className="mb-0.5">{elaborato.titolo}</h4>
                     <p className="text-xs text-[#666]">{elaborato.corso}</p>
                     <p className="text-xs text-[#f59e0b] mt-1.5 flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
+                      <Clock className="w-3 h-3" aria-label="Scadenza" />
                       Scadenza: {new Date(elaborato.scadenza).toLocaleDateString('it-IT')}
                     </p>
                   </div>
@@ -186,7 +187,7 @@ export function DashboardStudente() {
                 <div className="flex items-center justify-between text-sm">
                   <span className={aRischio ? 'text-[#ff0000]' : ''}>{item.corso}</span>
                   <span className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg ${aRischio ? 'text-[#ff0000] bg-red-50' : 'text-[#16a34a] bg-green-50'}`}>
-                    {aRischio ? <TrendingDown className="w-4 h-4" /> : <TrendingUp className="w-4 h-4" />}
+                    {aRischio ? <TrendingDown className="w-4 h-4" aria-label="Presenza in calo" /> : <TrendingUp className="w-4 h-4" aria-label="Presenza in aumento" />}
                     {item.percentuale}%
                   </span>
                 </div>

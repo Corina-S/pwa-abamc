@@ -29,13 +29,13 @@ export function DettaglioGiornoModal({ isOpen, onClose, data, eventi }: Dettagli
   const getTipoEventoIcon = (tipo: EventoCalendario['tipo']) => {
     switch (tipo) {
       case 'lezione':
-        return <Clock className="w-4 h-4" />;
+        return <Clock className="w-4 h-4" aria-label="Lezione" />;
       case 'scadenza':
-        return <FileText className="w-4 h-4" />;
+        return <FileText className="w-4 h-4" aria-label="Scadenza" />;
       case 'esame':
-        return <FileText className="w-4 h-4" />;
+        return <FileText className="w-4 h-4" aria-label="Esame" />;
       default:
-        return <Clock className="w-4 h-4" />;
+        return <Clock className="w-4 h-4" aria-label="Evento" />;
     }
   };
 
@@ -69,6 +69,7 @@ export function DettaglioGiornoModal({ isOpen, onClose, data, eventi }: Dettagli
           <button
             onClick={onClose}
             className="p-2 hover:bg-[#f5f5f5] rounded-lg transition-colors"
+            aria-label="Chiudi modale"
           >
             <X className="w-5 h-5" />
           </button>

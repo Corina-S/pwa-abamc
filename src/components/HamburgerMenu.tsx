@@ -19,7 +19,7 @@ function MenuItem({ to, icon: Icon, children, onClick }: MenuItemProps) {
       className="flex items-center gap-3 px-4 py-3.5 hover:bg-[#f8f9fa] rounded-xl mx-2 transition-all duration-200 group"
     >
       <div className="p-2 bg-[#f8f9fa] group-hover:bg-white rounded-lg transition-colors">
-        <Icon className="w-5 h-5" />
+        <Icon className="w-5 h-5" aria-label={children?.toString() || ''} />
       </div>
       <span>{children}</span>
     </Link>
@@ -41,10 +41,10 @@ function ExternalMenuItem({ href, icon: Icon, children }: ExternalMenuItemProps)
       className="flex items-center gap-3 px-4 py-3.5 hover:bg-[#f8f9fa] rounded-xl mx-2 transition-all duration-200 group"
     >
       <div className="p-2 bg-[#f8f9fa] group-hover:bg-white rounded-lg transition-colors">
-        <Icon className="w-5 h-5" />
+        <Icon className="w-5 h-5" aria-label={children?.toString() || ''} />
       </div>
       <span>{children}</span>
-      <ExternalLink className="w-4 h-4 ml-auto text-[#afafaf]" />
+      <ExternalLink className="w-4 h-4 ml-auto text-[#afafaf]" aria-label="Apri in nuova scheda" />
     </a>
   );
 }

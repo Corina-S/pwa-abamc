@@ -19,11 +19,11 @@ export function NotifichePanel({ isOpen, onClose }: NotifichePanelProps) {
   const getIcon = (tipo: Notifica['tipo']) => {
     switch (tipo) {
       case 'urgente':
-        return <AlertTriangle className="w-5 h-5 text-[#ff0000]" />;
+        return <AlertTriangle className="w-5 h-5 text-[#ff0000]" aria-label="Notifica urgente" />;
       case 'normale':
-        return <Info className="w-5 h-5 text-[#0000ff]" />;
+        return <Info className="w-5 h-5 text-[#0000ff]" aria-label="Notifica informativa" />;
       case 'info':
-        return <CheckCircle className="w-5 h-5 text-[#16a34a]" />;
+        return <CheckCircle className="w-5 h-5 text-[#16a34a]" aria-label="Notifica completata" />;
     }
   };
 

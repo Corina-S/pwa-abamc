@@ -111,12 +111,13 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="flex items-center gap-2">
-                <Upload className="w-5 h-5 text-[#ff0000]" />
+                <Upload className="w-5 h-5 text-[#ff0000]" aria-label="Caricamento elaborati" />
                 Caricamento Elaborati
               </h3>
               <button
                 onClick={onClose}
                 className="p-2 hover:bg-[#f5f5f5] rounded-lg transition-colors"
+                aria-label="Chiudi modale"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -193,7 +194,7 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
                 {consegnaSelezionata?.stato === 'consegnato' && consegnaSelezionata.fileCaricato ? (
                   <div className="p-4 bg-[#16a34a]/10 border border-[#16a34a]/30 rounded-lg">
                     <div className="flex items-center gap-3 mb-3">
-                      <Check className="w-5 h-5 text-[#16a34a]" />
+                      <Check className="w-5 h-5 text-[#16a34a]" aria-label="Elaborato consegnato" />
                       <div className="flex-1">
                         <p className="text-sm">Elaborato già consegnato</p>
                         <p className="text-xs text-[#afafaf]">
@@ -205,6 +206,7 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
                       <button
                         onClick={handleDownload}
                         className="flex-1 py-2 bg-[#000] text-white rounded-lg hover:bg-[#333] transition-colors flex items-center justify-center gap-2 text-sm"
+                        aria-label="Scarica elaborato"
                       >
                         <Download className="w-4 h-4" />
                         Scarica
@@ -212,6 +214,7 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
                       <button
                         onClick={handleRicarica}
                         className="flex-1 py-2 border-2 border-[#ff0000] text-[#ff0000] rounded-lg hover:bg-[#ff0000] hover:text-white transition-colors flex items-center justify-center gap-2 text-sm"
+                        aria-label="Ricarica nuovo elaborato"
                       >
                         <Upload className="w-4 h-4" />
                         Ricarica
@@ -240,7 +243,7 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
                           htmlFor="file-upload"
                           className="flex items-center justify-center gap-2 p-4 border-2 border-dashed border-[#afafaf]/50 rounded-lg hover:border-[#ff0000] hover:bg-[#ff0000]/5 transition-colors cursor-pointer"
                         >
-                          <FileText className="w-5 h-5 text-[#afafaf]" />
+                          <FileText className="w-5 h-5 text-[#afafaf]" aria-label="Carica file" />
                           <span className="text-sm text-[#666]">
                             {file ? file.name : 'Clicca per selezionare il file'}
                           </span>
@@ -248,7 +251,7 @@ export function CaricamentoElaboratoModal({ isOpen, onClose, consegne }: Caricam
                       </div>
                       {file && (
                         <div className="mt-2 flex items-center gap-2 text-xs text-[#16a34a]">
-                          <Check className="w-4 h-4" />
+                          <Check className="w-4 h-4" aria-label="File selezionato" />
                           <span>{(file.size / 1024 / 1024).toFixed(2)} MB</span>
                         </div>
                       )}

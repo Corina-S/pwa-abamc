@@ -30,7 +30,7 @@ export function DettaglioCorsoModal({ isOpen, onClose, corso }: DettaglioCorsoMo
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-[#ff0000] rounded-lg flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-white" />
+              <BookOpen className="w-6 h-6 text-white" aria-label="Corso" />
             </div>
             <div>
               <h3 className="mb-0">{corso.nome}</h3>
@@ -40,6 +40,7 @@ export function DettaglioCorsoModal({ isOpen, onClose, corso }: DettaglioCorsoMo
           <button
             onClick={onClose}
             className="p-2 hover:bg-[#f5f5f5] rounded-lg transition-colors"
+            aria-label="Chiudi modale"
           >
             <X className="w-5 h-5" />
           </button>
@@ -49,22 +50,22 @@ export function DettaglioCorsoModal({ isOpen, onClose, corso }: DettaglioCorsoMo
           {/* Info Base */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-3 bg-[#f5f5f5] rounded-lg">
-              <User className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" />
+              <User className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" aria-label="Anno" />
               <p className="text-xs text-[#afafaf]">Anno</p>
               <p className="text-sm">{corso.anno}°</p>
             </div>
             <div className="text-center p-3 bg-[#f5f5f5] rounded-lg">
-              <Award className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" />
+              <Award className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" aria-label="Crediti" />
               <p className="text-xs text-[#afafaf]">CFU</p>
               <p className="text-sm">{corso.cfu}</p>
             </div>
             <div className="text-center p-3 bg-[#f5f5f5] rounded-lg">
-              <Clock className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" />
+              <Clock className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" aria-label="Ore" />
               <p className="text-xs text-[#afafaf]">Ore</p>
               <p className="text-sm">{corso.ore}</p>
             </div>
             <div className="text-center p-3 bg-[#f5f5f5] rounded-lg">
-              <Calendar className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" />
+              <Calendar className="w-5 h-5 mx-auto mb-1 text-[#ff0000]" aria-label="Semestre" />
               <p className="text-xs text-[#afafaf]">Semestre</p>
               <p className="text-sm">I</p>
             </div>
@@ -73,7 +74,7 @@ export function DettaglioCorsoModal({ isOpen, onClose, corso }: DettaglioCorsoMo
           {/* Docente */}
           <div className="bg-[#f5f5f5] rounded-lg p-4">
             <div className="flex items-center gap-3 mb-2">
-              <User className="w-5 h-5 text-[#ff0000]" />
+              <User className="w-5 h-5 text-[#ff0000]" aria-label="Docente" />
               <h4 className="text-sm">Docente</h4>
             </div>
             <p className="text-sm ml-8">{corso.docente}</p>

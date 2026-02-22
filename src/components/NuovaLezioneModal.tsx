@@ -123,6 +123,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
               resetForm();
             }}
             className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+            aria-label="Chiudi form nuovo evento"
           >
             <X className="w-6 h-6" />
           </button>
@@ -183,7 +184,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
                 Data <span className="text-[#ff0000]">*</span>
               </label>
               <div className="relative">
-                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" />
+                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" aria-label="Seleziona data" />
                 <input
                   type="date"
                   value={data}
@@ -206,7 +207,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
                 Inizio <span className="text-[#ff0000]">*</span>
               </label>
               <div className="relative">
-                <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" />
+                <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" aria-label="Seleziona ora inizio" />
                 <input
                   type="time"
                   value={oraInizio}
@@ -220,7 +221,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
                 Fine <span className="text-[#ff0000]">*</span>
               </label>
               <div className="relative">
-                <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" />
+                <Clock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" aria-label="Seleziona ora fine" />
                 <input
                   type="time"
                   value={oraFine}
@@ -272,7 +273,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
                 Aula <span className="text-[#ff0000]">*</span>
               </label>
               <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" />
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" aria-label="Seleziona aula" />
                 <input
                   type="text"
                   value={aula}
@@ -291,7 +292,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
                 Link Online <span className="text-[#ff0000]">*</span>
               </label>
               <div className="relative">
-                <Video className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" />
+                <Video className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#afafaf]" aria-label="Input link online" />
                 <input
                   type="url"
                   value={linkOnline}
@@ -348,6 +349,7 @@ export function NuovaLezioneModal({ isOpen, onClose, corsi }: NuovaLezioneModalP
           <button
             onClick={handleSalva}
             className="flex-1 py-3 bg-[#ff0000] text-white rounded-xl hover:bg-[#cc0000] transition-colors flex items-center justify-center gap-2"
+            aria-label={`Salva ${tipoEvento === 'lezione' ? 'lezione' : 'appello'}`}
           >
             <Save className="w-5 h-5" />
             Salva {tipoEvento === 'lezione' ? 'Lezione' : 'Appello'}

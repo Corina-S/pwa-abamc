@@ -45,6 +45,7 @@ export function BottomNav({ isMenuOpen = false }: BottomNavProps) {
                 <Icon 
                   className={`${path === '/presenze' ? 'w-6 h-6' : 'w-5 h-5'}`}
                   strokeWidth={active ? 2.5 : 2}
+                  aria-label={label}
                 />
               </div>
               
